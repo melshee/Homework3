@@ -34,10 +34,12 @@ public class TestInstructor {
 
     
     @Test
-    public void testValidAddHW() {
+    public void testValidAddHW() {//valid case: instructor adds two homework assignments
         this.admin.createClass("hwClass", 2017, "InstructorV", 5);
         this.instructor.addHomework("InstructorV","hwClass", 2017, "hw1");
+        this.instructor.addHomework("InstructorV","hwClass", 2017, "hw2");
         assertTrue(this.instructor.homeworkExists("hwClass", 2017,"hw1"));
+        assertTrue(this.instructor.homeworkExists("hwClass", 2017,"hw2"));
     }
     
     @Test
@@ -46,6 +48,8 @@ public class TestInstructor {
         this.instructor.addHomework("WrongInstructor","hwClass", 2017, "hw1");
         assertFalse(this.instructor.homeworkExists("hwClass", 2017,"hw1"));
     }//assertion error: hw should not exist because incorrect instructor was passed in
+    
+    //tests for assignGrade()
     
     @Test 
     public void testValidAssignGrade() { //valid scenario

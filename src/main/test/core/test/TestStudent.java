@@ -70,16 +70,6 @@ public class TestStudent {
     		
     		this.student.registerForClass("Student2", "ClassC", 2017);
     		assertTrue(this.student.isRegisteredFor("Student2", "ClassC", 2017));
-
-    		
-    		
-//    		
-//    		this.student.registerForClass("Student2", "ClassB", 2017);
-//    		assertTrue(this.student.isRegisteredFor("Student1", "ClassB", 2017));
-//    		assertTrue(this.student.isRegisteredFor("Student2", "ClassB", 2017));
-//    		
-//    		this.student.registerForClass("Student3", "ClassB", 2017);
-//    		assertFalse(this.student.isRegisteredFor("Student3", "ClassB", 2017));
     }
     
     @Test
