@@ -82,7 +82,7 @@ public class TestAdmin {
     } 
     
     @Test 
-    public void testNotUniqueClass() {
+    public void testNotUniqueClass() {//invalid case - same class name nad year
     		this.admin.createClass("SameClass", 2017, "SameInstructor", 6);
     		this.admin.createClass("SameClass", 2017, "SameInstructor", 2);
 		assertTrue(this.admin.classExists("SameClass", 2017));
